@@ -1,0 +1,16 @@
+{
+  "name": "estudioalphapilates",
+  "description": "Website do Estúdio Alpha Pilates",
+  "author": "Marcos Garcia Marcker",
+  "version": "0.1.0",
+  "homepage": "http://estudioalpha.com.br",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-jshint": "~0.6.1",
+    "grunt-yui-compressor": "~0.3.0",
+    "grunt-contrib-sass": "~0.4.1"
+  }
+}
