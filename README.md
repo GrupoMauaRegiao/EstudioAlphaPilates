@@ -1,4 +1,4 @@
-StudioAlphaPilates
+EstudioAlphaPilates
 ==================
 
-Repositório para o website do Studio Alpha Pilates.
+Repositório para o website do Estúdio Alpha Pilates.
