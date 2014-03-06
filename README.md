@@ -7,7 +7,7 @@ Repositório para o website do Estúdio Alpha Pilates.
 
 Para seguir as instruções abaixo você deverá ter o node (npm) instalado.
 
-> Versão estática: RevistaMauaERegiao/static-frontend/
+> Versão estática: EstudioAlphaPilates/static-frontend/
 
 * Instale os node modules:
 
