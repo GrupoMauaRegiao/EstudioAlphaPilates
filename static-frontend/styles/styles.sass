@@ -3,3 +3,116 @@
 @import "reset.sass"
 @import "tipografia.sass"
 @import "cores.sass"
+
+body
+  font-family: "ProximaNova", Arial, sans-serif
+  background-image: url("../imagens/gradiente-inicio.png"), url("../imagens/fundo-inicio.jpg")
+  background-repeat: repeat-x, repeat
+  background-size: auto, cover
+  background-position: 0 0, 0 -300px
+
+header
+  width: 960px
+  margin: 0 auto
+
+  .topo
+    .logotipo,
+    .frase
+      height: 120px
+      float: left
+      
+    .logotipo
+      width: 400px
+      background: url("../imagens/logotipo.png") no-repeat 0% 85%
+
+    .frase
+      width: 560px
+      border-bottom: 2px solid $laranja
+      background: url("../imagens/frase.png") no-repeat 100% 50%
+
+  .menu
+    width: 560px
+    margin: 0 0 0 400px
+    float: left
+
+    nav
+      ul
+        li
+          display: inline-block
+          padding: 15px 12px
+
+          a
+            font-size: 20px
+            color: $cinzaEscuro
+            text-decoration: none
+            text-transform: uppercase
+            -webkit-transition: color 0.4s linear
+            transition: color 0.4s linear
+
+          a:hover
+            color: $laranja
+
+        li:first-child
+          padding: 10px 10px 10px 0
+
+footer
+  width: 100%
+  position: absolute
+  bottom: 0
+  background: $branco
+
+  .informacoes-contato
+    width: 960px
+    height: 60px
+    margin: 0 auto
+    color: $cinzaEscuro
+    padding: 40px 0 0 0
+    background: url("../imagens/fundo-rodape.png") no-repeat 0 15px
+
+    .telefone,
+    .endereco,
+    .endereco-e-mail
+      margin: 0 0 0 45px
+      float: left
+
+    .telefone
+      margin-top: -2px
+
+      .icone-telefone
+        width: 26px
+        height: 20px
+        background: url("../imagens/icone-telefone.png") no-repeat
+        float: left
+
+      .numero
+        margin: 0 0 0 5px
+        float: left
+
+        p
+          font-size: 24px
+
+          span
+            font-size: 18px
+
+    .endereco
+      address
+        font-size: 18px
+
+    .endereco-e-mail
+      .icone-e-mail
+        width: 26px
+        height: 20px
+        background: url("../imagens/icone-email.png") no-repeat
+        float: left
+
+      .e-mail
+        margin: 0 0 0 5px
+        float: left
+
+        a
+          font-size: 18px
+          color: $cinzaEscuro
+          text-decoration: none
+
+        a:hover
+          color: $laranja
