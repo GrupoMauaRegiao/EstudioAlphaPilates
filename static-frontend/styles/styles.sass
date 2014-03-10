@@ -11,17 +11,20 @@ body
   background-size: auto, cover
   background-position: 0 0, 0 -300px
 
+body.pagina-o-estudio
+  background: $cinza254 url("../imagens/gradiente-paginas.png") repeat-x
+
 header
   width: 960px
   margin: 0 auto
 
   .topo
-    .logotipo,
+    a .logotipo,
     .frase
       height: 120px
       float: left
-      
-    .logotipo
+
+    a .logotipo
       width: 400px
       background: url("../imagens/logotipo.png") no-repeat 0% 85%
 
@@ -54,6 +57,70 @@ header
 
         li:first-child
           padding: 10px 10px 10px 0
+
+header.pagina
+  .topo
+    .logotipo
+      width: 350px
+      background: url("../imagens/logotipo.png") no-repeat 0% 85%
+
+    .frase
+      width: 610px
+      border-bottom: none
+
+  .menu
+    width: 580px
+    border-radius: 15px
+    margin-left: 380px
+    z-index: 1
+    position: relative
+
+    nav
+      ul
+        li
+          background: $laranja
+          padding: 15px 14px 5px
+          margin-left: -5px
+
+          a
+            color: $branco
+
+          .ponta-balao
+            width: 0
+            height: 0
+            border: 15px solid
+            border-color: $branco transparent transparent transparent
+            margin: -7px 0 0
+
+          a:hover
+            color: darken($laranja, 30%)
+
+        li:first-child
+          padding-left: 45px
+          border-radius: 10px 0 0 10px
+
+        li.atual
+          width: auto
+          height: 30px
+          -webkit-transform: translateY(0)
+          background: $branco
+          border-radius: 5px
+          transform: translateY(0)
+          box-shadow: 0 0 5px $cinza100alpha
+          line-height: 40px
+          padding: 10px 10px 8px
+
+          a
+            color: $cinzaEscuro
+
+  .banner-o-estudio
+    width: 960px
+    height: 200px
+    margin: 0 auto
+    margin-top: -15px
+    position: relative
+    background: url("../imagens/banner-o-estudio.png") no-repeat 100% 0
+    float: left
 
 footer
   width: 100%
