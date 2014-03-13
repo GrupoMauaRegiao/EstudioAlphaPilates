@@ -196,7 +196,9 @@ header.pagina
       background: url("../imagens/ilustracao-estudio.png") no-repeat 65% 0%
 
 .conteudo
-  .conteudo-textual
+  article.conteudo-textual
+    width: 550px
+
     .titulo-pagina
       width: 550px
       margin-bottom: 10px
@@ -209,17 +211,29 @@ header.pagina
         text-decoration: underline
 
     .imagem-artigo
+      width: 550px
+      height: 185px
       margin: 0 0 20px 0
       float: left
 
       img
         width: 550px
         height: 185px
-        border: 2px solid $branco
         border-radius: 20px
 
-      img:hover
-        border: 2px solid $laranja
+    .efeito-hover
+      width: 550px
+      height: 185px
+      top: -189px
+      z-index: 1
+      background: transparent
+      border-radius: 20px
+      position: relative
+      -webkit-transition: background 0.2s ease-in-out
+      transition: background 0.2s ease-in-out
+
+    .efeito-hover:hover
+      background: $laranjaClaroAlpha
 
     .texto-conteudo
       p
@@ -232,6 +246,72 @@ header.pagina
 
       p
         margin: 0 0 20px 30px
+
+  .veja-tambem
+    width: 380px
+    padding: 125px 0 0 30px
+    float: left
+
+    .header-veja-tambem
+      .balao
+        width: 380px
+        height: 65px
+        background: $laranjaClaro
+        border-radius: 10px
+        box-shadow: 0 0 5px $cinza100alpha
+
+        h2
+          text-transform: uppercase
+          font-size: 26px
+          font-weight: bold
+          padding: 30px
+          color: $branco
+
+      .ponta-balao-veja-tambem
+        width: 0
+        height: 0
+        border: 15px solid
+        border-color: $laranjaClaro transparent transparent transparent
+        margin: -4px 0 0 25px
+
+    .lista-artigos
+      ul
+        li
+          padding: 30px 0 20px 30px
+          border-bottom: 1px solid $cinza205
+
+          a
+            font-size: 22px
+            text-transform: uppercase
+            text-decoration: none
+            color: $cinzaEscuro
+
+          a:hover
+            color: $laranjaClaro
+
+        li:first-child
+          padding-top: 0
+
+    .botao-ver-todos
+      margin: 40px 0 0 0
+
+      a
+        width: auto
+        height: 50px
+        padding: 12px 20px
+        border-radius: 5px
+        text-transform: uppercase
+        text-decoration: none
+        font: 18px "ProximaNova", Arial, sans-serif
+        font-weight: bold
+        color: $branco
+        background: $laranjaClaroBotao
+        -webkit-transition: background 0.2s linear
+        transition: background 0.2s linear
+
+      a:hover
+        background: $laranjaClaro
+
 
 footer
   width: 100%
