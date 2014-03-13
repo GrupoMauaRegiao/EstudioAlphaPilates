@@ -12,7 +12,8 @@ body
   background-position: 0 0, 0 -300px
 
 body.pagina-estudio,
-.pagina-pilates
+.pagina-pilates,
+.pagina-blog
   background: $cinza254 url("../imagens/gradiente-paginas.png") repeat-x
 
 header
@@ -120,6 +121,7 @@ header.pagina
 
   .banner-estudio,
   .banner-pilates,
+  .banner-blog
     width: 960px
     height: 180px
     margin: 0 auto
@@ -133,6 +135,9 @@ header.pagina
   // Trocar
   .banner-pilates
     background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  .banner-blog
+    background: url("../imagens/banner-blog.png") no-repeat 100% 0
 
   .sombra
     width: 960px
@@ -158,9 +163,11 @@ header.pagina
       width: 960px
       margin: 0 0 30px 0
 
-      h1
+      h1,
+      a
         font-size: 40px
         text-transform: uppercase
+        text-decoration: none
         color: $laranja
 
     .texto-conteudo
@@ -168,10 +175,12 @@ header.pagina
       float: left
 
       p
-        text-align: justify
-        margin: 0 0 0 30px
-        font-size: 18px
+        font: 18px $texto
         line-height: 24px
+        color: $cinzaTexto
+        text-align: justify
+        text-indent: 45px
+        margin: 0 0 0 30px
 
     .ilustracao,
     .foto-joseph-pilates
@@ -185,6 +194,44 @@ header.pagina
     // Trocar
     .foto-joseph-pilates
       background: url("../imagens/ilustracao-estudio.png") no-repeat 65% 0%
+
+.conteudo
+  .conteudo-textual
+    .titulo-pagina
+      width: 550px
+      margin-bottom: 10px
+
+      a
+        text-transform: inherit
+
+      a:hover
+        color: darken($laranja, 10%)
+        text-decoration: underline
+
+    .imagem-artigo
+      margin: 0 0 20px 0
+      float: left
+
+      img
+        width: 550px
+        height: 185px
+        border: 2px solid $branco
+        border-radius: 20px
+
+      img:hover
+        border: 2px solid $laranja
+
+    .texto-conteudo
+      p
+        font-size: 16px
+        line-height: 20px
+
+    .data-publicacao
+      width: 960px
+      float: left
+
+      p
+        margin: 0 0 20px 30px
 
 footer
   width: 100%
