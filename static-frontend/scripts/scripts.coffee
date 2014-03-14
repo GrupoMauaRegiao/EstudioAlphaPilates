@@ -1,6 +1,11 @@
 Estudio = {}
 
 Estudio.apps =
+  identificarUserAgent: ->
+    doc = document.documentElement
+    doc.setAttribute 'data-useragent', navigator.userAgent
+    return
+
   controlarOutrosPosts: ->
     balao = document.querySelectorAll '.cabecalho-lista-ordenada'
 
@@ -29,6 +34,18 @@ Estudio.apps =
           balao[i].addEventListener 'click', _toggle.bind null, i
     return
 
+  ajustaEfeitoFotos: ->
+    html = document.querySelector 'html'
+    useragent = html.getAttribute 'data-useragent'
+    efeito = document.querySelectorAll '.fotos .foto .efeito-hover'
+
+    if useragent.match 'Firefox'
+      for item, i in efeito
+        efeito[i].style.top = '0'
+    return
+
 do ->
+  Estudio.apps.identificarUserAgent()
+  Estudio.apps.ajustaEfeitoFotos()
   Estudio.apps.controlarOutrosPosts()
   return
