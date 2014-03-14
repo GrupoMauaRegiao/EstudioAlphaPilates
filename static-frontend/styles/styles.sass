@@ -4,6 +4,12 @@
 @import "tipografia.sass"
 @import "cores.sass"
 
+.mostrar
+  display: block
+
+.esconder
+  display: none
+
 body
   font-family: "ProximaNova", Arial, sans-serif
   background-image: url("../imagens/gradiente-inicio.png"), url("../imagens/fundo-inicio.jpg")
@@ -13,7 +19,8 @@ body
 
 body.pagina-estudio,
 .pagina-pilates,
-.pagina-blog
+.pagina-blog,
+.pagina-outros-posts
   background: $cinza254 url("../imagens/gradiente-paginas.png") repeat-x
 
 header
@@ -121,7 +128,8 @@ header.pagina
 
   .banner-estudio,
   .banner-pilates,
-  .banner-blog
+  .banner-blog,
+  .banner-outros-posts
     width: 960px
     height: 180px
     margin: 0 auto
@@ -137,6 +145,9 @@ header.pagina
     background: url("../imagens/banner-estudio.png") no-repeat 100% 0
 
   .banner-blog
+    background: url("../imagens/banner-blog.png") no-repeat 100% 0
+
+  .banner-outros-posts
     background: url("../imagens/banner-blog.png") no-repeat 100% 0
 
   .sombra
@@ -195,6 +206,67 @@ header.pagina
     .foto-joseph-pilates
       background: url("../imagens/ilustracao-estudio.png") no-repeat 65% 0%
 
+  .lista-posts
+    width: 960px
+    margin: 35px 0 30px 0
+    float: left
+
+    .cabecalho-lista-posts
+      margin: 0 0 20px 0
+
+      h1
+        font-size: 40px
+        text-transform: uppercase
+        color: $laranja
+
+    .lista-ordenada-ano
+      margin: 0 0 15px 0
+
+      .ano
+        .cabecalho-lista-ordenada
+          width: 70px
+          background: $laranjaClaro
+          cursor: pointer
+          padding: 10px
+          margin: 0 0 20px 0
+          text-align: center
+          border-radius: 5px
+          -webkit-transition: background 0.3s linear
+          transition: background 0.3s linear
+
+          h2
+            font-size: 20px
+            font-weight: bold
+            color: $branco
+
+        .ponta-balao-ano
+          width: 0
+          height: 0
+          border: 15px solid
+          border-color: $laranjaClaro transparent transparent transparent
+          margin: -30px 0 0
+          -webkit-transition: border-color 0.3s linear
+          transition: border-color 0.3s linear
+
+        .lista-ordenada
+          ul
+            li
+              span
+                width: 80px
+                font-size: 28px
+                color: $cinza100alpha
+                display: block
+                float: left
+
+              a
+                font-size: 28px
+                color: $cinzaEscuro
+                text-decoration: none
+
+              a:hover
+                text-decoration: underline
+                color: $preto
+
 .conteudo
   article.conteudo-textual
     width: 550px
@@ -213,7 +285,7 @@ header.pagina
     .imagem-artigo
       width: 550px
       height: 185px
-      margin: 0 0 20px 0
+      margin: 0 0 20px
       float: left
 
       img
@@ -288,7 +360,7 @@ header.pagina
           padding-top: 0
 
     .botao-ver-todos
-      margin: 40px 0 0 0
+      margin: 40px 0 0
 
       a
         width: auto
