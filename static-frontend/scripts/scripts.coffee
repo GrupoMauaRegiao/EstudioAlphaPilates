@@ -39,9 +39,10 @@ Estudio.apps =
     useragent = html.getAttribute 'data-useragent'
     efeito = document.querySelectorAll '.fotos .foto .efeito-hover'
 
-    if useragent.match 'Firefox'
-      for item, i in efeito
-        efeito[i].style.top = '0'
+    if efeito[0]
+      if useragent.match 'Firefox'
+        for item, i in efeito
+          efeito[i].style.top = '0'
     return
 
 do ->
