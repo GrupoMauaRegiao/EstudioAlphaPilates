@@ -34,7 +34,7 @@ Estudio.apps =
           balao[i].addEventListener 'click', _toggle.bind null, i
     return
 
-  ajustaEfeitoFotos: ->
+  ajustarEfeitoFotos: ->
     html = document.querySelector 'html'
     useragent = html.getAttribute 'data-useragent'
     efeito = document.querySelectorAll '.fotos .foto .efeito-hover'
@@ -46,6 +46,6 @@ Estudio.apps =
 
 do ->
   Estudio.apps.identificarUserAgent()
-  Estudio.apps.ajustaEfeitoFotos()
+  Estudio.apps.ajustarEfeitoFotos()
   Estudio.apps.controlarOutrosPosts()
   return
