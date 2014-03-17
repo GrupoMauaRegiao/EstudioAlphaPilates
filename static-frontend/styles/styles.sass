@@ -22,6 +22,7 @@ body.pagina-estudio,
 .pagina-blog,
 .pagina-outros-posts,
 .pagina-fotos,
+.pagina-videos
   background: $cinza254 url("../imagens/gradiente-paginas.png") repeat-x
 
 header
@@ -131,7 +132,8 @@ header.pagina
   .banner-pilates,
   .banner-blog,
   .banner-outros-posts,
-  .banner-fotos
+  .banner-fotos,
+  .banner-videos
     width: 960px
     height: 180px
     margin: 0 auto
@@ -153,6 +155,9 @@ header.pagina
     background: url("../imagens/banner-blog.png") no-repeat 100% 0
 
   .banner-fotos
+    background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  .banner-videos
     background: url("../imagens/banner-estudio.png") no-repeat 100% 0
 
   .sombra
@@ -272,12 +277,14 @@ header.pagina
                 text-decoration: underline
                 color: $preto
 
-  .exibicao-fotos
+  .exibicao-fotos,
+  .exibicao-videos
     width: 960px
     margin: 35px 0 30px 0
     float: left
 
-    .cabecalho-fotos
+    .cabecalho-fotos,
+    .cabecalho-videos
       margin: 0 0 20px
 
       h1
@@ -285,12 +292,14 @@ header.pagina
         text-transform: uppercase
         color: $laranja
 
-    .fotos
+    .fotos,
+    .videos
       width: 960px
       height: 280px
       float: left
 
-      .foto
+      .foto,
+      .video
         width: 225px
         height: 150px
         margin: 0 20px 20px 0
@@ -318,7 +327,8 @@ header.pagina
         .efeito-hover:hover
           background: $laranjaClaroAlpha
 
-      .foto:nth-child(4n)
+      .foto:nth-child(4n),
+      .video:nth-child(4n)
         margin: 0 0 16px 0
 
 .conteudo

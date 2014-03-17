@@ -45,8 +45,20 @@ Estudio.apps =
           efeito[i].style.top = '0'
     return
 
+  ajustarEfeitoVideos: ->
+    html = document.querySelector 'html'
+    useragent = html.getAttribute 'data-useragent'
+    efeito = document.querySelectorAll '.videos .video .efeito-hover'
+
+    if efeito[0]
+      if useragent.match 'Firefox'
+        for item, i in efeito
+          efeito[i].style.top = '0'
+    return
+
 do ->
   Estudio.apps.identificarUserAgent()
   Estudio.apps.ajustarEfeitoFotos()
+  Estudio.apps.ajustarEfeitoVideos()
   Estudio.apps.controlarOutrosPosts()
   return
