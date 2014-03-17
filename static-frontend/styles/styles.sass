@@ -164,7 +164,7 @@ header.pagina
 
   .banner-contato
     background: url("../imagens/banner-contato.png") no-repeat 100% 0
-    height: 295px
+    height: 290px
 
   .sombra
     width: 960px
@@ -338,6 +338,105 @@ header.pagina
       .foto:nth-child(4n),
       .video:nth-child(4n)
         margin: 0 0 16px 0
+
+  .contato
+    .formulario-contato
+      width: 480px
+      float: left
+      
+      .nome,
+      .e-mail,
+      .mensagem
+        float: left
+
+        input
+          width: 232px
+          height: 45px
+
+        input,
+        textarea
+          text-align: center
+          text-transform: uppercase
+          font: 20px "ProximaNova", Arial, sans-serif
+          padding: 2px
+          outline: 0
+          border: 2px solid $cinzaEscuro
+
+      .nome
+        input
+          border-right: 0
+          border-radius: 15px 0 0 15px
+
+        input:focus
+          box-shadow: -5px 0 10px $laranjaClaroAlpha
+
+      .linha-central
+        width: 2px
+        height: 35px
+        margin: 9px 0 0 0
+        border-top: 0
+        border-right: 2px solid $cinzaEscuro
+        border-bottom: 0
+        border-left: 0
+        z-indez: 1
+        position: relative
+        float: left
+
+      .e-mail
+        margin: 0 0 0 -4px
+
+        input
+          border-left: 0
+          border-radius: 0 15px 15px 0
+
+        input:focus
+          box-shadow: 5px 0 10px $laranjaClaroAlpha
+
+      .mensagem
+        margin: 15px 0 0 0
+
+        textarea
+          width: 468px
+          height: 115px
+          padding-top: 10px
+          resize: none
+          border-radius: 15px
+          border: 2px solid $cinzaEscuro
+
+        textarea:focus
+          box-shadow: 0 0 10px $laranjaClaroAlpha
+
+      .ponta-balao-enviar
+        width: 0
+        height: 0
+        float: left
+        border: 15px solid
+        border-color: transparent transparent $laranjaClaro transparent
+        margin: -20px 390px 0
+
+      .enviar
+        width: 480px
+        float: left
+        text-align: right
+        margin: -8px -3px 0
+
+        input
+          width: auto
+          height: 40px
+          border: 0
+          border-radius: 5px
+          padding: 10px
+          color: $branco
+          cursor: pointer
+          box-shadow: 0 2px 2px $cinza205
+          font: 20px/30px "ProximaNova", Arial, sans-serif
+          font-weight: bold
+          outline: 0
+          text-transform: uppercase
+          background: $laranjaClaro
+
+        input:hover
+          text-shadow: 0 0 5px $laranja
 
 .conteudo
   article.conteudo-textual
