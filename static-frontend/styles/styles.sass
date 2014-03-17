@@ -17,12 +17,13 @@ body
   background-size: auto, cover
   background-position: 0 0, 0 -300px
 
-body.pagina-estudio,
+.pagina-estudio,
 .pagina-pilates,
 .pagina-blog,
 .pagina-outros-posts,
 .pagina-fotos,
-.pagina-videos
+.pagina-videos,
+.pagina-contato
   background: $cinza254 url("../imagens/gradiente-paginas.png") repeat-x
 
 header
@@ -133,7 +134,8 @@ header.pagina
   .banner-blog,
   .banner-outros-posts,
   .banner-fotos,
-  .banner-videos
+  .banner-videos,
+  .banner-contato
     width: 960px
     height: 180px
     margin: 0 auto
@@ -159,6 +161,10 @@ header.pagina
 
   .banner-videos
     background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  .banner-contato
+    background: url("../imagens/banner-contato.png") no-repeat 100% 0
+    height: 295px
 
   .sombra
     width: 960px
@@ -278,13 +284,15 @@ header.pagina
                 color: $preto
 
   .exibicao-fotos,
-  .exibicao-videos
+  .exibicao-videos,
+  .contato
     width: 960px
     margin: 35px 0 30px 0
     float: left
 
     .cabecalho-fotos,
-    .cabecalho-videos
+    .cabecalho-videos,
+    .cabecalho-contato
       margin: 0 0 20px
 
       h1

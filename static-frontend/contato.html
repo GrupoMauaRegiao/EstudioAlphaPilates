@@ -7,9 +7,9 @@
     <meta name="author" content='Grupo Mauá e Região de Comunicação'>
     <link rel="shortcut icon" href="imagens/favicon.ico">
     <link rel="stylesheet" href="styles/styles.min.css">
-    <title>✔ Estúdio Alpha Pilates :: O estúdio</title>
+    <title>✔ Estúdio Alpha Pilates :: Contato</title>
   </head>
-  <body class="pagina-estudio">
+  <body class="pagina-contato">
 
     <section class="layout">
       <header class="pagina">
@@ -24,40 +24,67 @@
           <nav>
             <ul>
               <li><a href="index.html">Início</a></li>
-              <li class="atual">
-                <a href="estudio.html">Estúdio</a>
-                <section class="ponta-balao"></section>
-              </li>
+              <li><a href="estudio.html">Estúdio</a></li>
               <li><a href="pilates.html">Pilates</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="fotos.html">Fotos</a></li>
               <li><a href="videos.html">Vídeos</a></li>
-              <li><a href="contato.html">Contato</a></li>
+              <li class="atual">
+                <a href="contato.html">Contato</a>
+                <section class="ponta-balao"></section>
+              </li>
             </ul>
           </nav>
         </section>
-
-        <section class="banner-estudio" title="O estúdio"></section>
+        <a href=""></a>
+        <section class="banner-contato" title="Blog"></section>
         <section class="sombra"></section>
       </header>
 
       <section class="conteudo">
-        <section class="conteudo-textual">
-          <section class="titulo-pagina">
-            <h1>O estúdio</h1>
+        <section class="contato">
+          <section class="cabecalho-contato">
+            <h1>Fale conosco</h1>
           </section>
 
-          <section class="texto-conteudo">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis?
-            </p>
+          <section class="formulario-contato">
+            <form action="enviar-mensagem.php" method="get">
+              <section class="nome">
+                <input type="text" id="nome" name="nome" placeholder="Nome">
+              </section>
+
+              <section class="e-mail">
+                <input type="text" id="e-mail" name="e-mail" placeholder="E-mail">
+              </section>
+
+              <section class="mensagem">
+                <textarea id="mensagem" name="mensagem" placeholder="Mensagem"></textarea>
+              </section>
+
+              <section class="enviar">
+                <input type="button" id="enviar" value="Enviar" name="enviar">
+              </section>
+            </form>
           </section>
 
-          <section class="ilustracao"></section>
+          <section class="localizacao-contato">
+            <section class="ponta-balao-localizacao-contato"></section>
+            <section class="conteudo-localizacao-contato">
+              <section class="icone-telefone"></section>
+              <section class="telefone">
+                <p><span>+55 11</span> 2564-1661</p>
+              </section>
 
+              <address>
+                <p>Rua Campos Sales, 199 - Centro - Mauá - SP.</p>
+              </address>
+
+              <section class="icone-e-mail"></section>
+              <section class="e-mail">
+                <a href="mailto:contato@estudioalpha.com.br">contato@estudioalpha.com.br</a>
+              </section>
+            </section>
+          </section>
         </section>
       </section>
 
