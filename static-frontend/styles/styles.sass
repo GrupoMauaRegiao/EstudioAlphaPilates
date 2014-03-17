@@ -438,6 +438,65 @@ header.pagina
         input:hover
           text-shadow: 0 0 5px $laranja
 
+    .localizacao-contato
+      width: 480px
+      float: left
+
+      .ponta-balao-localizacao-contato
+        width: 0
+        height: 0
+        float: left
+        border: 30px solid
+        border-color: transparent transparent $laranjaClaro transparent
+        margin: -60px 100px 0
+
+      .conteudo-localizacao-contato
+        width: auto
+        height: 184px
+        padding: 30px
+        margin: 0 0 0 30px
+        border-radius: 20px
+        background: $laranjaClaro
+
+        .icone-telefone
+          width: 26px
+          height: 20px
+          background: url("../imagens/icone-telefone-amarelo.png") no-repeat
+          margin: 0 0 15px
+
+        .telefone
+          margin: 0 0 25px
+
+          p
+            color: $amarelo
+            font-size: 30px
+
+            span
+              font-size: 22px
+
+        address
+          margin: 0 0 30px
+
+          p
+            font-size: 18px
+            font-weight: bold
+            color: $branco
+
+        .icone-e-mail
+          width: 25px
+          height: 17px
+          background: url("../imagens/icone-email-branco.png") no-repeat
+          margin: 0 0 10px
+
+        .e-mail
+          a
+            font-size: 18px
+            color: $branco
+            text-decoration: none
+
+          a:hover
+            text-decoration: underline
+
 .conteudo
   article.conteudo-textual
     width: 550px
@@ -549,7 +608,6 @@ header.pagina
 
       a:hover
         background: $laranjaClaro
-
 
 footer
   width: 100%
