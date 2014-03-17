@@ -16,6 +16,7 @@ body
   background-repeat: repeat-x, repeat
   background-size: auto, cover
   background-position: 0 0, 0 -300px
+  overflow-x: hidden
 
 .pagina-estudio,
 .pagina-pilates,
@@ -42,12 +43,27 @@ header
 
     .frase
       width: 560px
-      border-bottom: 2px solid $laranja
       background: url("../imagens/frase.png") no-repeat 100% 50%
+
+  .linha
+    width: 1200px
+    margin: 0 0 -3px 285px
+    height: 2px
+    background: $laranja
+    float: left
+
 
   .menu
     width: 960px
     float: left
+
+    .fundo-menu
+      width: 1200px
+      margin: 5px 0 14px 280px
+      height: 40px
+      background: $laranja
+      position: absolute
+      z-index: -1
 
     nav
       float: right
