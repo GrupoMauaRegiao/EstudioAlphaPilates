@@ -1,0 +1,20 @@
+{
+  "name": "estudioalphapilates",
+  "description": "Website do Estúdio Alpha Pilates",
+  "author": "Marcos Garcia Marcker",
+  "version": "0.1.0",
+  "homepage": "http://estudioalpha.com.br",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-coffeelint": "~0.0.8",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-yui-compressor": "~0.3.3",
+    "grunt-contrib-sass": "~0.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GrupoMauaRegiao/EstudioAlphaPilates.git"
+  }
+}

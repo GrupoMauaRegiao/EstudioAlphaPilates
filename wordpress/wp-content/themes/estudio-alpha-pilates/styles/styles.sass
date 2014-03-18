@@ -1,0 +1,687 @@
+/* Estilos gerais */
+
+@import "reset.sass"
+@import "tipografia.sass"
+@import "cores.sass"
+
+.mostrar
+  display: block
+
+.esconder
+  display: none
+
+body
+  font-family: "ProximaNova", Arial, sans-serif
+  background-image: url("../imagens/gradiente-inicio.png"), url("../imagens/fundo-inicio.jpg")
+  background-repeat: repeat-x, repeat
+  background-size: auto, cover
+  background-position: 0 0, 0 -300px
+  overflow-x: hidden
+
+.pagina-estudio,
+.pagina-pilates,
+.pagina-blog,
+.pagina-outros-posts,
+.pagina-fotos,
+.pagina-videos,
+.pagina-contato
+  background: $cinza254 url("../imagens/gradiente-paginas.png") repeat-x
+
+header
+  width: 960px
+  margin: 0 auto
+
+  .topo
+    a .logotipo,
+    .frase
+      height: 120px
+      float: left
+
+    a .logotipo
+      width: 400px
+      background: url("../imagens/logotipo.png") no-repeat 0% 85%
+
+    .frase
+      width: 560px
+      background: url("../imagens/frase.png") no-repeat 100% 50%
+
+  .linha
+    width: 1200px
+    margin: 0 0 -3px 285px
+    height: 2px
+    background: $laranja
+    float: left
+
+
+  .menu
+    width: 960px
+    float: left
+
+    .fundo-menu
+      width: 1200px
+      margin: 5px 0 14px 280px
+      height: 40px
+      background: $laranja
+      position: absolute
+      z-index: -1
+
+    nav
+      float: right
+
+      ul
+        li
+          display: inline-block
+          padding: 15px 12px
+
+          a
+            font-size: 20px
+            color: $cinzaEscuro
+            text-decoration: none
+            text-transform: uppercase
+            -webkit-transition: color 0.4s linear
+            transition: color 0.4s linear
+
+          a:hover
+            color: $laranja
+
+        li:first-child
+          padding: 10px 10px 10px 0
+
+header.pagina
+  .topo
+    width: 960px
+    float: left
+
+    .logotipo
+      width: 350px
+      background: url("../imagens/logotipo.png") no-repeat 0% 85%
+
+    .frase
+      width: 610px
+      border-bottom: none
+
+  .menu
+    border-radius: 15px
+    margin: 0
+    z-index: 1
+    position: relative
+
+    nav
+      ul
+        li
+          background: $laranja
+          padding: 15px 14px 5px
+          margin-left: -5px
+
+          a
+            color: $branco
+
+          .ponta-balao
+            width: 0
+            height: 0
+            border: 15px solid
+            border-color: $branco transparent transparent transparent
+            margin: -7px 0 0
+
+          a:hover
+            color: $cinzaEscuro
+
+        li:first-child
+          padding-left: 45px
+          border-radius: 10px 0 0 10px
+
+        li.atual
+          width: auto
+          height: 30px
+          -webkit-transform: translateY(0)
+          background: $branco
+          border-radius: 5px
+          transform: translateY(0)
+          box-shadow: 0 0 5px $cinza100alpha
+          line-height: 40px
+          padding: 10px 10px 8px
+
+          a
+            color: $cinzaEscuro
+            font-weight: bold
+
+  .banner-estudio,
+  .banner-pilates,
+  .banner-blog,
+  .banner-outros-posts,
+  .banner-fotos,
+  .banner-videos,
+  .banner-contato
+    width: 960px
+    height: 180px
+    margin: 0 auto
+    margin-top: -15px
+    position: relative
+    float: left
+
+  .banner-estudio
+    background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  // Trocar
+  .banner-pilates
+    background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  .banner-blog
+    background: url("../imagens/banner-blog.png") no-repeat 100% 0
+
+  .banner-outros-posts
+    background: url("../imagens/banner-blog.png") no-repeat 100% 0
+
+  .banner-fotos
+    background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  .banner-videos
+    background: url("../imagens/banner-estudio.png") no-repeat 100% 0
+
+  .banner-contato
+    background: url("../imagens/banner-contato.png") no-repeat 100% 0
+    height: 290px
+
+  .sombra
+    width: 960px
+    height: 30px
+    background: url("../imagens/fundo-rodape.png") no-repeat 100% 0
+    background-size: 690px
+    float: left
+
+.conteudo
+  width: 960px
+  margin: 0 auto
+
+  .conteudo-textual
+    margin: 35px 0 0 0
+    float: left
+
+    .titulo-pagina
+      width: 960px
+      margin: 0 0 30px 0
+
+      h1,
+      a
+        font-size: 40px
+        text-transform: uppercase
+        text-decoration: none
+        color: $laranja
+
+    .texto-conteudo
+      width: 550px
+      float: left
+
+      p
+        font: 16px $texto
+        line-height: 24px
+        color: $cinzaTexto
+        text-align: justify
+        text-indent: 45px
+        margin: 0 0 0 30px
+
+    .ilustracao,
+    .foto-joseph-pilates
+      width: 410px
+      height: 300px
+      float: left
+
+    .ilustracao
+      background: url("../imagens/ilustracao-estudio.png") no-repeat 65% 0%
+
+    // Trocar
+    .foto-joseph-pilates
+      background: url("../imagens/ilustracao-estudio.png") no-repeat 65% 0%
+
+  .lista-posts
+    width: 960px
+    margin: 35px 0 30px 0
+    float: left
+
+    .cabecalho-lista-posts
+      margin: 0 0 20px
+
+      h1
+        font-size: 40px
+        text-transform: uppercase
+        color: $laranja
+
+    .lista-ordenada-ano
+      margin: 0 0 15px 0
+
+      .ano
+        .cabecalho-lista-ordenada
+          width: 70px
+          background: $laranjaClaro
+          cursor: pointer
+          padding: 10px
+          margin: 0 0 20px 0
+          text-align: center
+          border-radius: 5px
+          -webkit-transition: background 0.3s linear
+          transition: background 0.3s linear
+
+          h2
+            font-size: 20px
+            font-weight: bold
+            color: $branco
+
+        .ponta-balao-ano
+          width: 0
+          height: 0
+          border: 15px solid
+          border-color: $laranjaClaro transparent transparent transparent
+          margin: -30px 0 0
+          -webkit-transition: border-color 0.3s linear
+          transition: border-color 0.3s linear
+
+        .lista-ordenada
+          ul
+            li
+              span
+                width: 80px
+                font-size: 28px
+                color: $cinza100alpha
+                display: block
+                float: left
+
+              a
+                font-size: 28px
+                color: $cinzaEscuro
+                text-decoration: none
+
+              a:hover
+                text-decoration: underline
+                color: $preto
+
+  .exibicao-fotos,
+  .exibicao-videos,
+  .contato
+    width: 960px
+    margin: 35px 0 30px 0
+    float: left
+
+    .cabecalho-fotos,
+    .cabecalho-videos,
+    .cabecalho-contato
+      margin: 0 0 20px
+
+      h1
+        font-size: 40px
+        text-transform: uppercase
+        color: $laranja
+
+    .fotos,
+    .videos
+      width: 960px
+      height: 280px
+      float: left
+
+      .foto,
+      .video
+        width: 225px
+        height: 150px
+        margin: 0 20px 20px 0
+        border-radius: 10px
+        cursor: pointer
+        background: $cinza100alpha
+        float: left
+
+        img
+          width: 225px
+          height: 150px
+          border-radius: 10px
+
+        .efeito-hover
+          width: 225px
+          height: 150px
+          top: -153px
+          z-index: 1
+          background: transparent
+          border-radius: 10px
+          position: relative
+          -webkit-transition: background 0.5s ease-in-out
+          transition: background 0.5s ease-in-out
+
+        .efeito-hover:hover
+          background: $laranjaClaroAlpha
+
+      .foto:nth-child(4n),
+      .video:nth-child(4n)
+        margin: 0 0 16px 0
+
+  .contato
+    .formulario-contato
+      width: 480px
+      float: left
+      
+      .nome,
+      .e-mail,
+      .mensagem
+        float: left
+
+        input
+          width: 232px
+          height: 45px
+
+        input,
+        textarea
+          text-align: center
+          text-transform: uppercase
+          font: 20px "ProximaNova", Arial, sans-serif
+          padding: 2px
+          outline: 0
+          border: 2px solid $cinzaEscuro
+
+      .nome
+        input
+          border-right: 0
+          border-radius: 15px 0 0 15px
+
+        input:focus
+          box-shadow: -5px 0 10px $laranjaClaroAlpha
+
+      .linha-central
+        width: 2px
+        height: 35px
+        margin: 9px 0 0 0
+        border-top: 0
+        border-right: 2px solid $cinzaEscuro
+        border-bottom: 0
+        border-left: 0
+        z-indez: 1
+        position: relative
+        float: left
+
+      .e-mail
+        margin: 0 0 0 -4px
+
+        input
+          border-left: 0
+          border-radius: 0 15px 15px 0
+
+        input:focus
+          box-shadow: 5px 0 10px $laranjaClaroAlpha
+
+      .mensagem
+        margin: 15px 0 0 0
+
+        textarea
+          width: 468px
+          height: 115px
+          padding-top: 10px
+          resize: none
+          border-radius: 15px
+          border: 2px solid $cinzaEscuro
+
+        textarea:focus
+          box-shadow: 0 0 10px $laranjaClaroAlpha
+
+      .ponta-balao-enviar
+        width: 0
+        height: 0
+        float: left
+        border: 15px solid
+        border-color: transparent transparent $laranjaClaro transparent
+        margin: -20px 390px 0
+
+      .enviar
+        width: 480px
+        float: left
+        text-align: right
+        margin: -8px -3px 0
+
+        input
+          width: auto
+          height: 40px
+          border: 0
+          border-radius: 5px
+          padding: 10px
+          color: $branco
+          cursor: pointer
+          box-shadow: 0 2px 2px $cinza205
+          font: 20px/30px "ProximaNova", Arial, sans-serif
+          font-weight: bold
+          outline: 0
+          text-transform: uppercase
+          background: $laranjaClaro
+
+        input:hover
+          text-shadow: 0 0 5px $laranja
+
+    .localizacao-contato
+      width: 480px
+      float: left
+
+      .ponta-balao-localizacao-contato
+        width: 0
+        height: 0
+        float: left
+        border: 30px solid
+        border-color: transparent transparent $laranjaClaro transparent
+        margin: -60px 100px 0
+
+      .conteudo-localizacao-contato
+        width: auto
+        height: 184px
+        padding: 30px
+        margin: 0 0 0 30px
+        border-radius: 20px
+        background: $laranjaClaro
+
+        .icone-telefone
+          width: 26px
+          height: 20px
+          background: url("../imagens/icone-telefone-amarelo.png") no-repeat
+          margin: 0 0 15px
+
+        .telefone
+          margin: 0 0 25px
+
+          p
+            color: $amarelo
+            font-size: 30px
+
+            span
+              font-size: 22px
+
+        address
+          margin: 0 0 30px
+
+          p
+            font-size: 18px
+            font-weight: bold
+            color: $branco
+
+        .icone-e-mail
+          width: 25px
+          height: 17px
+          background: url("../imagens/icone-email-branco.png") no-repeat
+          margin: 0 0 10px
+
+        .e-mail
+          a
+            font-size: 18px
+            color: $branco
+            text-decoration: none
+
+          a:hover
+            text-decoration: underline
+
+.conteudo
+  article.conteudo-textual
+    width: 550px
+
+    .titulo-pagina
+      width: 550px
+      margin-bottom: 10px
+
+      a
+        text-transform: inherit
+
+      a:hover
+        color: darken($laranja, 10%)
+        text-decoration: underline
+
+    .imagem-artigo
+      width: 550px
+      height: 185px
+      margin: 0 0 20px
+      float: left
+
+      img
+        width: 550px
+        height: 185px
+        border-radius: 20px
+
+    .efeito-hover
+      width: 550px
+      height: 185px
+      top: -189px
+      z-index: 1
+      background: transparent
+      border-radius: 20px
+      position: relative
+      -webkit-transition: background 0.2s ease-in-out
+      transition: background 0.2s ease-in-out
+
+    .efeito-hover:hover
+      background: $laranjaClaroAlpha
+
+    .data-publicacao
+      width: 960px
+      float: left
+
+      p
+        margin: 0 0 20px 30px
+
+  .veja-tambem
+    width: 380px
+    padding: 125px 0 0 30px
+    float: left
+
+    .header-veja-tambem
+      .balao
+        width: 380px
+        height: 65px
+        background: $laranjaClaro
+        border-radius: 10px
+        box-shadow: 0 0 5px $cinza100alpha
+
+        h2
+          text-transform: uppercase
+          font-size: 26px
+          font-weight: bold
+          padding: 30px
+          color: $branco
+
+      .ponta-balao-veja-tambem
+        width: 0
+        height: 0
+        border: 15px solid
+        border-color: $laranjaClaro transparent transparent transparent
+        margin: -4px 0 0 25px
+
+    .lista-artigos
+      ul
+        li
+          padding: 30px 0 20px 30px
+          border-bottom: 1px solid $cinza205
+
+          a
+            font-size: 22px
+            text-transform: uppercase
+            text-decoration: none
+            color: $cinzaEscuro
+
+          a:hover
+            color: $laranjaClaro
+
+        li:first-child
+          padding-top: 0
+
+    .botao-ver-todos
+      margin: 40px 0 0
+
+      a
+        width: auto
+        height: 50px
+        padding: 12px 20px
+        border-radius: 5px
+        text-transform: uppercase
+        text-decoration: none
+        font: 18px "ProximaNova", Arial, sans-serif
+        font-weight: bold
+        color: $branco
+        background: $laranjaClaroBotao
+        -webkit-transition: background 0.2s linear
+        transition: background 0.2s linear
+
+      a:hover
+        background: $laranjaClaro
+
+footer
+  width: 100%
+  margin-top: 50px
+  background: $branco
+  float: left
+
+  .informacoes-contato
+    width: 960px
+    height: 60px
+    margin: 0 auto
+    color: $cinzaEscuro
+    padding: 55px 0 0 0
+    background: url("../imagens/fundo-rodape.png") no-repeat 0 15px
+
+    .telefone,
+    .endereco,
+    .endereco-e-mail
+      margin: 0 0 0 45px
+      float: left
+
+    .telefone
+      margin-top: -2px
+
+      .icone-telefone
+        width: 26px
+        height: 20px
+        background: url("../imagens/icone-telefone.png") no-repeat
+        float: left
+
+      .numero
+        margin: 0 0 0 5px
+        float: left
+
+        p
+          font-size: 24px
+
+          span
+            font-size: 18px
+
+    .endereco
+      address
+        font-size: 18px
+
+    .endereco-e-mail
+      .icone-e-mail
+        width: 26px
+        height: 20px
+        background: url("../imagens/icone-email.png") no-repeat
+        float: left
+
+      .e-mail
+        margin: 0 0 0 5px
+        float: left
+
+        a
+          font-size: 18px
+          color: $cinzaEscuro
+          text-decoration: none
+
+        a:hover
+          color: $laranja
+
+footer.home
+  position: absolute
+  bottom: 0
