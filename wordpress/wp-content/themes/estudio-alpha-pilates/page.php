@@ -10,6 +10,8 @@ if (is_page("estudio")) {
   include "fotos.php";
 } elseif (is_page("videos")) {
   include "videos.php";
+} elseif (is_page("contato")) {
+  include "contato.php";
 }
 get_footer();
 ?>
