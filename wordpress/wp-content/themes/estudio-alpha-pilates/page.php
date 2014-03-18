@@ -8,6 +8,8 @@ if (is_page("estudio")) {
   include "blog.php";
 } elseif (is_page("fotos")) {
   include "fotos.php";
+} elseif (is_page("videos")) {
+  include "videos.php";
 }
 get_footer();
 ?>
