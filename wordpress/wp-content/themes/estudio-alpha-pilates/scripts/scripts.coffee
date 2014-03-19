@@ -39,32 +39,6 @@ Estudio.apps =
           balao[i].addEventListener 'click', _toggle.bind null, i
     return
 
-  ajustarEfeitoFotos: ->
-    # Ajusta efeito hover nas miniaturas das fotos.
-
-    html = document.querySelector 'html'
-    useragent = html.getAttribute 'data-useragent'
-    efeito = document.querySelectorAll '.fotos .foto .efeito-hover'
-
-    if efeito[0]
-      if useragent.match 'Firefox'
-        for item, i in efeito
-          efeito[i].style.top = '0'
-    return
-
-  ajustarEfeitoVideos: ->
-    # Ajusta efeito hover nas miniaturas dos vídeos.
-
-    html = document.querySelector 'html'
-    useragent = html.getAttribute 'data-useragent'
-    efeito = document.querySelectorAll '.videos .video .efeito-hover'
-
-    if efeito[0]
-      if useragent.match 'Firefox'
-        for item, i in efeito
-          efeito[i].style.top = '0'
-    return
-
   destacarLinkAtual: ->
     # Implementa balão de diálogo como background no menu das páginas, exceto na
     # inicial.
@@ -93,7 +67,5 @@ Estudio.apps =
 do ->
   Estudio.apps.destacarLinkAtual()
   Estudio.apps.identificarUserAgent()
-  Estudio.apps.ajustarEfeitoFotos()
-  Estudio.apps.ajustarEfeitoVideos()
   Estudio.apps.controlarOutrosPosts()
   return

@@ -347,27 +347,18 @@ header.pagina
         margin: 0 20px 20px 0
         border-radius: 10px
         cursor: pointer
-        background: $cinza100alpha
+        background-size: cover !important
         float: left
 
-        img
+        a
+          border: 0
+          outline: 0
           width: 225px
           height: 150px
+          display: block
           border-radius: 10px
 
-        .efeito-hover
-          width: 225px
-          height: 150px
-          top: -153px
-          z-index: 1
-          background: transparent
-          border-radius: 10px
-          position: relative
-          -webkit-transition: background 0.5s ease-in-out
-          transition: background 0.5s ease-in-out
-
-        .efeito-hover:hover
-          background: $laranjaClaroAlpha
+          // img
 
       .foto:nth-child(4n),
       .video:nth-child(4n)
