@@ -58,7 +58,7 @@
               ?>
                 <li>
                   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <?php the_title(); ?>
+                    <?php echo formatarTitulo(get_the_title()); ?>
                   </a>
                 </li>
               <?php endwhile; else: ?>

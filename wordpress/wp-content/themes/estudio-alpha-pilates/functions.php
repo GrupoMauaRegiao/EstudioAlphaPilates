@@ -5,14 +5,16 @@ function criarMenu() {
 }
 
 function definirClassesParaPaginas() {
-  if (is_page("estudio")) {
+  if (is_home()) {
+    $classe = "";
+  } elseif (is_page("estudio")) {
     $classe = "pagina-estudio";
   } elseif (is_page("pilates")) {
     $classe = "pagina-pilates";
   } elseif (is_page("blog")) {
     $classe = "pagina-blog";
-  } elseif (is_page("todos-os-posts")) {
-    $classe = "pagina-todos-os-posts";
+  } elseif (is_page("outros-posts")) {
+    $classe = "pagina-outros-posts";
   } elseif (is_page("fotos")) {
     $classe = "pagina-fotos";
   } elseif (is_page("videos")) {
@@ -26,14 +28,16 @@ function definirClassesParaPaginas() {
 }
 
 function definirClassesParaBanners() {
-  if (is_page("estudio")) {
+  if (is_home()) {
+    $classe = "";
+  } elseif (is_page("estudio")) {
     $classe = "banner-estudio";
   } elseif (is_page("pilates")) {
     $classe = "banner-pilates";
   } elseif (is_page("blog")) {
     $classe = "banner-blog";
-  } elseif (is_page("todos-os-posts")) {
-    $classe = "banner-todos-os-posts";
+  } elseif (is_page("outros-posts")) {
+    $classe = "banner-outros-posts";
   } elseif (is_page("fotos")) {
     $classe = "banner-fotos";
   } elseif (is_page("videos")) {
@@ -78,5 +82,17 @@ function exibirFundoMenu() {
   return !is_home() ?
          "<section class='fundo-menu'></section>" :
          "";
+}
+
+function formatarTitulo($titulo) {
+  $length = strlen($titulo);
+  $limiteCaracteres = 50;
+
+  if ($length >= $limiteCaracteres) {
+    $titulo = substr_replace(substr($titulo, 0, $limiteCaracteres), "_", $length);
+  } else {
+    $titulo = $titulo;
+  }
+  return $titulo;
 }
 ?>
