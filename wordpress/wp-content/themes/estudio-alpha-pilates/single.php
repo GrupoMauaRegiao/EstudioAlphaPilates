@@ -68,7 +68,7 @@
           </section>
 
           <section class="botao-ver-todos">
-            <a href="outros-posts.html" title="Ver todos os posts">Ver todos os posts</a>
+            <a href="outros-posts" title="Ver todos os posts">Ver todos os posts</a>
           </section>
         </section>
 

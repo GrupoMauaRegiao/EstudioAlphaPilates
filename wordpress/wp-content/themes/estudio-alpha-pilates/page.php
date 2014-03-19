@@ -6,6 +6,8 @@ if (is_page("estudio")) {
   include "pilates.php";
 } elseif (is_page("blog")) {
   include "blog.php";
+} elseif (is_page("outros-posts")) {
+  include "outros-posts.php";
 } elseif (is_page("fotos")) {
   include "fotos.php";
 } elseif (is_page("videos")) {

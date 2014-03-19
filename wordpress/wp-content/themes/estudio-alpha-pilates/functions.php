@@ -1,6 +1,6 @@
 <?php
 function criarMenu() {
-  $paginas = wp_list_pages("title_li=");
+  $paginas = wp_list_pages("title_li=&exclude=-59");
   return $paginas;
 }
 
