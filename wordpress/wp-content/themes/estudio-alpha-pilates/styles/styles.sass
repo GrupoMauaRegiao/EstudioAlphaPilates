@@ -212,13 +212,32 @@ header.pagina
       width: 550px
       float: left
 
-      p
+      p,
+      li
         font: 16px $texto
         line-height: 24px
         color: $cinzaTexto
         text-align: justify
         text-indent: 45px
         margin: 0 0 0 30px
+
+        strong
+          font-weight: bold
+
+        em
+          font-style: italic
+
+      ul,
+      ol
+        margin: 15px 15px 15px
+
+        li
+          list-style-type: square
+          text-indent: 10px
+
+      ol
+        li
+          list-style-type: decimal
 
     .ilustracao,
     .foto-joseph-pilates
@@ -526,12 +545,14 @@ header.pagina
     .imagem-artigo
       width: 550px
       height: 185px
+      overflow: hidden
+      border-radius: 20px
       margin: 0 0 20px
       float: left
 
       img
         width: 550px
-        height: 185px
+        height: auto
         border-radius: 20px
 
     .efeito-hover

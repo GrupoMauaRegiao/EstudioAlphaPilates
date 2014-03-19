@@ -19,6 +19,8 @@ function definirClassesParaPaginas() {
     $classe = "pagina-videos";
   } elseif (is_page("contato")) {
     $classe = "pagina-contato";
+  } else {
+    $classe = "pagina-blog";
   }
   return $classe;
 }
@@ -38,6 +40,8 @@ function definirClassesParaBanners() {
     $classe = "banner-videos";
   } elseif (is_page("contato")) {
     $classe = "banner-contato";
+  } else {
+    $classe = "banner-blog";
   }
   return $classe;
 }

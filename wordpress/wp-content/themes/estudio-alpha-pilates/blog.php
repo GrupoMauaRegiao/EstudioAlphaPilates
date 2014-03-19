@@ -1,28 +1,38 @@
       <section class="conteudo">
-        <article class="conteudo-textual">
-          <section class="titulo-pagina">
-            <a href="#materia" title="Atletas usam pilates para melhorar rendimento">Atletas usam pilates para melhorar rendimento</a>
-          </section>
+        <?php query_posts("orderby=asc&showposts=1&category_name=blog"); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <article class="conteudo-textual">
+            <section class="titulo-pagina">
+              <a href="<?php the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </section>
 
-          <section class="imagem-artigo">
-            <img src="<?php bloginfo('template_url'); ?>/imagens/banner-post-blog.png" alt="" title="Imagem: atletas usam pilates para melhorar rendimento" />
+            <?php if (get_post_meta($post -> ID, "Imagem para o post", true)) { ?>
+              <section class="imagem-artigo">
+                <img src="<?php echo get_post_meta($post -> ID, 'Imagem para o post', true); ?>"
+                     alt="Imagem: <?php echo strtolower(get_the_title()); ?>"
+                     title="Imagem: <?php echo strtolower(get_the_title()); ?>" />
 
-            <section class="efeito-hover" title="Imagem: atletas usam pilates para melhorar rendimento"></section>
-          </section>
+                <section class="efeito-hover" title="Imagem: <?php echo strtolower(get_the_title()); ?>"></section>
+              </section>
+            <?php } ?>
 
-          <section class="data-publicacao">
-            <p title="Publicado em 13 de março de 2014 às 14h04">Publicado em 13 de março de 2014 às 14h04</p>
-          </section>
+            <section class="data-publicacao">
+              <p title="Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?>">Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?> por <?php the_author_meta("user_firstname"); ?> <?php the_author_meta("user_lastname"); ?></p>
+            </section>
 
-          <section class="texto-conteudo">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, minus, odio, eligendi placeat iusto sit voluptatum nisi doloremque quam vero quaerat molestias. Necessitatibus, possimus totam voluptatum sunt aut dolorum perspiciatis?
-            </p>
-          </section>
-        </article>
+            <section class="texto-conteudo">
+              <?php the_content(); ?>
+            </section>
+          </article>
+        <?php endwhile; else: ?>
+          <article class="conteudo-textual">
+            <section class="titulo-pagina">
+              <h1>Sem posts por enquanto</h1>
+            </section>
+          </article>
+        <?php endif; ?>
 
         <section class="veja-tambem">
           <section class="header-veja-tambem">
@@ -34,9 +44,27 @@
 
           <section class="lista-artigos">
             <ul>
-              <li><a href="#" title="Elas arrasam no pilates! Angélica leva dois pontos a frente">Elas arrasam no pilates! Angélica leva...</a></li>
-              <li><a href="#" title="Um artigo sobre pilates ainda é o mais lido">Um artigo sobre pilates ainda...</a></li>
-              <li><a href="#" title="Dificeis dilemas ao escolher a academia de pilates correta">Difíceis dilemas ao escolher a academia...</a></li>
+              <?php
+              $id = $post -> ID;
+              query_posts(
+                  array(
+                      "orderby" => "asc",
+                      "showposts" => 3,
+                      "category_name" => "blog",
+                      "post__not_in" => array($id)
+                  )
+              );
+
+              if (have_posts()) : while (have_posts()) : the_post(); 
+              ?>
+                <li>
+                  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <?php the_title(); ?>
+                  </a>
+                </li>
+              <?php endwhile; else: ?>
+                <li>Nada foi publicado ainda.</li>
+              <?php endif; ?>
             </ul>
           </section>
 
