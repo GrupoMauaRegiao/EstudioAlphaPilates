@@ -14,8 +14,6 @@
                 <img src="<?php echo get_post_meta($post -> ID, 'Imagem para o post', true); ?>"
                      alt="Imagem: <?php echo strtolower(get_the_title()); ?>"
                      title="Imagem: <?php echo strtolower(get_the_title()); ?>" />
-
-                <section class="efeito-hover" title="Imagem: <?php echo strtolower(get_the_title()); ?>"></section>
               </section>
             <?php } ?>
 
