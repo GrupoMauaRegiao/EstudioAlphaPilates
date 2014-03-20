@@ -26,6 +26,8 @@
     <?php wp_footer(); ?>
     <script src="<?php bloginfo('template_url'); ?>/scripts/libs/jquery-1.10.2.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/scripts/libs/lightbox-2.6.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/scripts/libs/list.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/scripts/libs/list.pagination.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/scripts/scripts.js"></script>
 
   </body>

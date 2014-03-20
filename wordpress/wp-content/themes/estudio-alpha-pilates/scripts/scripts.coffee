@@ -64,8 +64,19 @@ Estudio.apps =
         links[i + 1].appendChild pontaBalao
     return
 
+  paginador: ->
+    fotos = document.querySelector '.list'
+    if fotos
+      options =
+        valueNames: ['']
+        page: 8
+        plugins: [ ListPagination {} ]
+      paginacao = new List 'fotos', options
+    return
+
 do ->
   Estudio.apps.destacarLinkAtual()
+  Estudio.apps.paginador()
   Estudio.apps.identificarUserAgent()
   Estudio.apps.controlarOutrosPosts()
   return

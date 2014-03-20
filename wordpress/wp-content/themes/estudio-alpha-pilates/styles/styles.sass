@@ -337,7 +337,7 @@ header.pagina
     .fotos,
     .videos
       width: 960px
-      height: 280px
+      height: auto
       float: left
 
       .foto,
@@ -350,6 +350,7 @@ header.pagina
         background-size: cover !important
         float: left
 
+
         a
           border: 0
           outline: 0
@@ -358,11 +359,37 @@ header.pagina
           display: block
           border-radius: 10px
 
-          // img
-
       .foto:nth-child(4n),
       .video:nth-child(4n)
         margin: 0 0 16px 0
+
+    .paginador
+      width: 960px
+      float: left
+      text-align: center
+
+      .paginas
+        ul
+          li
+            display: inline-block
+            
+            a
+              width: 15px
+              background: $laranjaClaro
+              margin: 0 5px
+              padding: 10px
+              border-radius: 5px
+              display: block
+              text-decoration: none
+              color: $branco
+              font-weight: bold
+
+            a:hover
+              background: $laranja
+
+          .active
+            a
+              background: $cinzaEscuro
 
   .contato
     .formulario-contato
