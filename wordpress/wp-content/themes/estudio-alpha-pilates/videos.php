@@ -4,45 +4,13 @@
             <h1>Vídeos</h1>
           </section>
 
-          <section class="videos">
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
+          <section class="videos" id="videos">
+            <section class="list"></section>
 
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
-
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
-
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
-
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
-
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
-
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
-            </section>
-
-            <section class="video">
-              <img src="" alt="" title="">
-              <section class="efeito-hover"></section>
+            <section class="paginador">
+              <section class="paginas">
+                <ul class="pagination"></ul>
+              </section>
             </section>
           </section>
         </section>

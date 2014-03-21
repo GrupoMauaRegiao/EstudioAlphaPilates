@@ -6,7 +6,10 @@
     <meta name="description" content="Descrição...">
     <meta name="author" content='Grupo Mauá e Região de Comunicação'>
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/imagens/favicon.ico">
+
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/libs/lightbox.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/libs/jquery.fancybox.css">
+
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/styles.min.css">
     <title>✔ <?php bloginfo("name"); ?> :: Início</title>
   </head>

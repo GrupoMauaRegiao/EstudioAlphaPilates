@@ -33,7 +33,7 @@ Estudio.apps =
           ponta[i].style.borderColor = cinza + 'transparent transparent transparent'
         return
 
-      for item, i in balao
+      for item, i in balao by 1
         if i isnt 0
           lista[i].setAttribute 'class', 'lista-ordenada esconder'
           balao[i].addEventListener 'click', _toggle.bind null, i
@@ -58,13 +58,13 @@ Estudio.apps =
     pontaBalao = document.createElement 'section'
     pontaBalao.setAttribute 'class', 'ponta-balao'
 
-    for pagina, i in paginas
+    for pagina, i in paginas by 1
       if classe[0] is paginas[i]
         links[i + 1].setAttribute 'class', 'atual'
         links[i + 1].appendChild pontaBalao
     return
 
-  paginador: ->
+  paginadorFotos: ->
     fotos = document.querySelector '.list'
     if fotos
       options =
@@ -74,9 +74,41 @@ Estudio.apps =
       paginacao = new List 'fotos', options
     return
 
+  paginadorVideos: ->
+    videos = document.querySelector '.list'
+    if videos
+      options =
+        valueNames: ['']
+        page: 8
+        plugins: [ ListPagination {} ]
+      paginacao = new List 'videos', options
+    return
+
+  youTubeAPI: (response) ->
+    videos = document.querySelector '.list'
+    ytObj = response.items
+    todosVideos = ''
+    len = ytObj.length - 1
+
+    for video, i in ytObj by 1
+      if i < len
+        todosVideos += '
+            <section class="video"
+                     style="background: url(' + ytObj[i].snippet.thumbnails.high.url + ') no-repeat;"
+                     title="' + ytObj[i].snippet.title + '">
+              <a class="fancy fancybox.iframe"
+                 href="https://www.youtube.com/embed/' + ytObj[i].id.videoId + '?autoplay=1"
+                 title="' + ytObj[i].snippet.title + '"></a>
+            </section>'
+    videos.innerHTML = todosVideos
+    return
+
 do ->
   Estudio.apps.destacarLinkAtual()
-  Estudio.apps.paginador()
+  Estudio.apps.paginadorFotos()
   Estudio.apps.identificarUserAgent()
   Estudio.apps.controlarOutrosPosts()
   return
+
+$(document).ready ->
+  $('.fancy').fancybox()
