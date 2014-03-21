@@ -103,15 +103,14 @@ Estudio.apps =
     len = ytObj.length - 1
 
     for video, i in ytObj by 1
-      if i < len
-        todosVideos += '
-            <section class="video"
-                     style="background: url(' + ytObj[i].snippet.thumbnails.high.url + ') no-repeat;"
-                     title="' + ytObj[i].snippet.title + '">
-              <a class="fancy fancybox.iframe"
-                 href="https://www.youtube.com/embed/' + ytObj[i].id.videoId + '?autoplay=1"
-                 title="' + ytObj[i].snippet.title + '"></a>
-            </section>'
+      todosVideos += '
+          <section class="video"
+                   style="background: url(' + ytObj[i].snippet.thumbnails.high.url + ') no-repeat;"
+                   title="' + ytObj[i].snippet.title + '">
+            <a class="fancy fancybox.iframe"
+               href="https://www.youtube.com/embed/' + ytObj[i].id.videoId + '?autoplay=1"
+               title="' + ytObj[i].snippet.title + '"></a>
+          </section>' if i < len
     videos.innerHTML = todosVideos
     return
 
@@ -123,4 +122,5 @@ do ->
   return
 
 $(document).ready ->
-  $('.fancy').fancybox()
+  $('.fancy').fancybox() if $ '.fancy'
+  return
