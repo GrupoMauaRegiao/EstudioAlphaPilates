@@ -92,7 +92,7 @@ Estudio.apps =
     # Obtém JSON object via YouTube API v3 e cria uma lista de links para os vídeos
     # obtidos no canal selecionado. A url completa é a seguinte:
     #
-    # URL: https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqiQNOIlCb3CMf1Hoc8YY0Q&maxResults=50&order=date&key=AIzaSyDE3RNDKPDE9Qy-L4ZFHu33Zqvev1ootsY&callback=Estudio.apps.youTubeAPI
+    # URL: https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=CHANNEL_API&maxResults=50&order=date&key=GOOGLE_YT_API&callback=Estudio.apps.youTubeAPI
     #
     # O último parâmetro é o `callback`, ou seja, a função que receberá o
     # JSON object.
