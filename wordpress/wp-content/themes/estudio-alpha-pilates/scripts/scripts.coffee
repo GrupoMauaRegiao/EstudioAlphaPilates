@@ -65,6 +65,8 @@ Estudio.apps =
     return
 
   paginadorFotos: ->
+    # Adiciona paginador para a exibição de fotos utilizando a biblioteca List.js
+
     fotos = document.querySelector '.list'
     if fotos
       options =
@@ -75,6 +77,8 @@ Estudio.apps =
     return
 
   paginadorVideos: ->
+    # Adiciona paginador para a exibição de vídeos utilizando a biblioteca List.js
+
     videos = document.querySelector '.list'
     if videos
       options =
@@ -85,6 +89,14 @@ Estudio.apps =
     return
 
   youTubeAPI: (response) ->
+    # Obtém JSON object via YouTube API v3 e cria uma lista de links para os vídeos
+    # obtidos no canal selecionado. A url completa é a seguinte:
+    #
+    # URL: https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqiQNOIlCb3CMf1Hoc8YY0Q&maxResults=50&order=date&key=AIzaSyDE3RNDKPDE9Qy-L4ZFHu33Zqvev1ootsY&callback=Estudio.apps.youTubeAPI
+    #
+    # O último parâmetro é o `callback`, ou seja, a função que receberá o
+    # JSON object.
+
     videos = document.querySelector '.list'
     ytObj = response.items
     todosVideos = ''
