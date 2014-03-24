@@ -96,6 +96,8 @@ Estudio.apps =
     #
     # O último parâmetro é o `callback`, ou seja, a função que receberá o
     # JSON object.
+    #
+    # Implementa Fancybox para exibir os vídeos.
 
     videos = document.querySelector '.list'
     ytObj = response.items
@@ -116,7 +118,11 @@ Estudio.apps =
     return
 
   enviarEmail: ->
+    # Efetua a validação dos campos e executa o envio das mensagens com método
+    # GET a partir de um formulário HTML.
+
     formulario = document.querySelector '.formulario-contato form'
+
     if formulario
       cNome = document.querySelector '#nome'
       cEmail = document.querySelector '#e-mail'
