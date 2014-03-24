@@ -5,16 +5,9 @@ if (PATH_SEPARATOR == ";") {
   $quebraLinha = "\n";
 }
 
-if ($_GET["flag"]) {
-  $destino = $_GET["e-mail"];
-  $email = "contato@estudioalpha.com.br";
-  $assunto = "Estúdio Alpha Pilates";
-} else {
-  $destino = "contato@estudioalpha.com.br";
-  $email = $_GET["e-mail"];
-  $assunto = "CONTATO (" . $nome . "): Estúdio Alpha Pilares";
-}
-
+$destino = $_GET["e-mail"];
+$email = "contato@estudioalpha.com.br";
+$assunto = "Site Estúdio Alpha Pilates";
 $nome = $_GET["nome"];
 $mensagem = "Mensagem:<br><pre>" . $_GET["mensagem"] . "</pre>";
 

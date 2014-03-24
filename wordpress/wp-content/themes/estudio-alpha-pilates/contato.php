@@ -5,7 +5,7 @@
           </section>
 
           <section class="formulario-contato">
-            <form action="enviar-mensagem.php" method="get">
+            <form action="<?php bloginfo('template_url'); ?>/enviar-mensagem.php" method="get">
               <section class="nome">
                 <input type="text" id="nome" name="nome" placeholder="Nome">
               </section>
@@ -25,6 +25,10 @@
                 <input type="button" id="enviar" value="Enviar" name="enviar">
               </section>
             </form>
+
+            <section class="mensagem-sucesso esconder">
+              <p>Mensagem enviada com sucesso. Obrigada!</p>
+            </section>
           </section>
 
           <section class="localizacao-contato">

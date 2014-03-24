@@ -10,6 +10,19 @@
 .esconder
   display: none
 
+#nome.erro
+  border-top: 2px solid red !important
+  border-left: 2px solid red !important
+  border-bottom: 2px solid red !important
+
+#e-mail.erro
+  border-top: 2px solid red !important
+  border-right: 2px solid red !important
+  border-bottom: 2px solid red !important
+
+#mensagem.erro
+  border: 2px solid red !important
+
 body
   font-family: "ProximaNova", Arial, sans-serif
   background-image: url("../imagens/gradiente-inicio.png"), url("../imagens/fundo-inicio.jpg")
@@ -488,6 +501,12 @@ header.pagina
 
         input:hover
           text-shadow: 0 0 5px $laranja
+
+    .mensagem-sucesso
+      p
+        font-size: 30px
+        color: rgb(255, 153, 52)
+        text-transform: uppercase
 
     .localizacao-contato
       width: 480px
