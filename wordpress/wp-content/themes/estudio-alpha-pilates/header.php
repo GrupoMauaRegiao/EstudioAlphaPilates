@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="estudio alpha pilates">
-    <meta name="description" content="Descrição...">
+    <meta name="keywords" content="estudio alpha pilates, mauá, pilates, condicionamento físico, educação física, joseph pilates, grupo maua e regiao, revista maua, videos pilates, fotos pilates, thaisa paulino">
+    <meta name="description" content="Sejam muito bem-vindos ao Estúdio Alpha Pilates.">
     <meta name="author" content='Grupo Mauá e Região de Comunicação'>
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/imagens/favicon.ico">
 
