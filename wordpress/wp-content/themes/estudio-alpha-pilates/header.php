@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/libs/jquery.fancybox.css">
 
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/styles.min.css">
-    <title>✔ <?php bloginfo("name"); ?> :: Início</title>
+    <title>✔ <?php bloginfo("name"); ?><?php echo definirTituloPagina(); ?></title>
   </head>
   <body class="<?php echo definirClassesParaPaginas(); ?>">
 

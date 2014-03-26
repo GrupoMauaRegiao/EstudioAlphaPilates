@@ -95,4 +95,15 @@ function formatarTitulo($titulo) {
   }
   return $titulo;
 }
+
+function definirTituloPagina() {
+  if (is_page()) {
+    $titulo = " :: " . get_the_title();
+  } elseif (is_single()) {
+    $titulo = " :: Blog: " . get_the_title();
+  } else {
+    $titulo = " :: Início";
+  }
+  return $titulo;
+}
 ?>
