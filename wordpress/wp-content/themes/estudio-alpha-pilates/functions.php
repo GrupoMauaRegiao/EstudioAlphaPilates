@@ -106,4 +106,8 @@ function definirTituloPagina() {
   }
   return $titulo;
 }
+
+function definirUrlAtual() {
+  return "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+}
 ?>
