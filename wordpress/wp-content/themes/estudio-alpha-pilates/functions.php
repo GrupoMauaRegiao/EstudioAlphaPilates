@@ -64,7 +64,7 @@ function definirClasseHeader() {
 
 function definirBanners() {
   if (!is_home()) {
-    $html = "<section class='" . definirClassesParaBanners() . "' title='Pilates'></section>
+    $html = "<section class='" . definirClassesParaBanners() . "'></section>
              <section class='sombra'></section>";
   } else {
     $html = "";
