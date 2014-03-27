@@ -17,7 +17,7 @@
             <?php } ?>
 
             <section class="data-publicacao">
-              <p title="Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?>">Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?> por <?php the_author_meta("user_firstname"); ?> <?php the_author_meta("user_lastname"); ?></p>
+              <p title="Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?>">Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?> <?php echo autor(); ?></p>
             </section>
 
             <section class="texto-conteudo">

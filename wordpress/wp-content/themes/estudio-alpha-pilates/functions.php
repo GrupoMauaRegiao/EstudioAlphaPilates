@@ -115,4 +115,16 @@ function definirUrlAtual() {
   return "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 }
 
+function autor() {
+  $nome = get_the_author_meta("user_firstname");
+
+  if ($nome) {
+    $sobrenome = get_the_author_meta("user_lastname");
+    $autor = " por " . $nome . " " . $sobrenome;
+  } else {
+    $autor = "";
+  }
+  return $autor;
+}
+
 ?>

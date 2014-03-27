@@ -18,7 +18,7 @@
             <?php } ?>
 
             <section class="data-publicacao">
-              <p title="Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?>">Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?> por <?php the_author_meta("user_firstname"); ?> <?php the_author_meta("user_lastname"); ?></p>
+              <p title="Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?>">Publicado em <?php echo get_the_date(); ?> às <?php echo get_the_time(); ?> <?php echo autor(); ?></p>
             </section>
 
             <section class="texto-conteudo">
@@ -58,7 +58,7 @@
               ?>
                 <li>
                   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <?php echo formatarTitulo(get_the_title()); ?>
+                    <?php echo formatarTitulo(get_the_title(), 50); ?>
                   </a>
                 </li>
               <?php endwhile; else: ?>
