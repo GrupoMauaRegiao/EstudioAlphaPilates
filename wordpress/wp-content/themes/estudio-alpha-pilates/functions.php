@@ -69,8 +69,15 @@ function definirClasseHeader() {
 
 function definirBanners() {
   if (!is_home()) {
-    $html = "<section class='" . definirClassesParaBanners() . "'></section>
-             <section class='sombra'></section>";
+    if (is_page("contato")) {
+      $html = "<a title='Mapa' target='_blank' href='https://www.google.com/maps/place/Rua+Campos+Sales,+199+-+Vila+Bocaina/@-23.6697118,-46.4558507,17z/data=!3m1!4b1!4m2!3m1!1s0x94ce695c4e753b75:0xa2d2b5e0d7404c5a'>
+                <section class='" . definirClassesParaBanners() . "'></section>
+              </a>
+              <section class='sombra'></section>";
+    } else {
+      $html = "<section class='" . definirClassesParaBanners() . "'></section>
+               <section class='sombra'></section>";
+    }
   } else {
     $html = "";
   }
