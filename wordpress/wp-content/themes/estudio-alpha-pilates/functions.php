@@ -19,7 +19,7 @@ function definirClassesParaPaginas() {
   } elseif (is_page("blog")) {
     $classe = "pagina-blog";
   } elseif (is_page("outros-posts")) {
-    $classe = "pagina-outros-posts";
+    $classe = "pagina-blog";
   } elseif (is_page("fotos")) {
     $classe = "pagina-fotos";
   } elseif (is_page("videos")) {
