@@ -1,15 +1,18 @@
 <?php
-function definirIdPorTitulo($titulo) {
+function definirIdPorTitulo($titulo)
+{
   $pagina = get_page_by_title($titulo);
   return $pagina -> ID;
 }
 
-function criarMenu() {
+function criarMenu()
+{
   $paginas = wp_list_pages("title_li=&exclude=-" . definirIdPorTitulo('Outros posts'));
   return $paginas;
 }
 
-function definirClassesParaPaginas() {
+function definirClassesParaPaginas()
+{
   if (is_home()) {
     $classe = "";
   } elseif (is_page("estudio")) {
@@ -32,7 +35,8 @@ function definirClassesParaPaginas() {
   return $classe;
 }
 
-function definirClassesParaBanners() {
+function definirClassesParaBanners()
+{
   if (is_home()) {
     $classe = "";
   } elseif (is_page("estudio")) {
@@ -55,19 +59,22 @@ function definirClassesParaBanners() {
   return $classe;
 }
 
-function definirClasseParaHome() {
+function definirClasseParaHome()
+{
   return is_home() ?
          "home" :
          "";
 }
 
-function definirClasseHeader() {
+function definirClasseHeader()
+{
   return !is_home() ?
          "pagina" :
          "";
 }
 
-function definirBanners() {
+function definirBanners()
+{
   if (!is_home()) {
     if (is_page("contato")) {
       $html = "<a title='Mapa' target='_blank' href='https://www.google.com/maps/place/Rua+Campos+Sales,+199+-+Vila+Bocaina/@-23.6697118,-46.4558507,17z/data=!3m1!4b1!4m2!3m1!1s0x94ce695c4e753b75:0xa2d2b5e0d7404c5a'>
@@ -84,19 +91,22 @@ function definirBanners() {
   return $html;
 }
 
-function exibirLinha() {
+function exibirLinha()
+{
   return is_home() ?
          "<section class='linha'></section>" :
          "";
 }
 
-function exibirFundoMenu() {
+function exibirFundoMenu()
+{
   return !is_home() ?
          "<section class='fundo-menu'></section>" :
          "";
 }
 
-function formatarTitulo($titulo, $limite) {
+function formatarTitulo($titulo, $limite)
+{
   $length = strlen($titulo);
 
   if ($length >= $limite) {
@@ -107,7 +117,8 @@ function formatarTitulo($titulo, $limite) {
   return $titulo;
 }
 
-function definirTituloPagina() {
+function definirTituloPagina()
+{
   if (is_page()) {
     $titulo = " :: " . get_the_title();
   } elseif (is_single()) {
@@ -118,11 +129,13 @@ function definirTituloPagina() {
   return $titulo;
 }
 
-function definirUrlAtual() {
+function definirUrlAtual()
+{
   return "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 }
 
-function autor() {
+function autor()
+{
   $nome = get_the_author_meta("user_firstname");
 
   if ($nome) {
@@ -133,5 +146,4 @@ function autor() {
   }
   return $autor;
 }
-
 ?>
