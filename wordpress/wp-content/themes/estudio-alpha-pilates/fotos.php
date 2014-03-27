@@ -8,7 +8,7 @@
             <section class="list">
               <?php
               $index = 0;
-              query_posts("orderby=asc&showposts=8&category_name=fotos");
+              query_posts("orderby=asc&showposts=50&category_name=fotos");
               if (have_posts()) : while (have_posts()) : the_post();
                 $index += 1;
               ?>

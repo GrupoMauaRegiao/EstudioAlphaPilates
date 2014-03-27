@@ -1,6 +1,11 @@
 <?php
+function definirIdPorTitulo($titulo) {
+  $pagina = get_page_by_title($titulo);
+  return $pagina -> ID;
+}
+
 function criarMenu() {
-  $paginas = wp_list_pages("title_li=&exclude=-59");
+  $paginas = wp_list_pages("title_li=&exclude=-" . definirIdPorTitulo('Outros posts'));
   return $paginas;
 }
 
@@ -84,12 +89,11 @@ function exibirFundoMenu() {
          "";
 }
 
-function formatarTitulo($titulo) {
+function formatarTitulo($titulo, $limite) {
   $length = strlen($titulo);
-  $limiteCaracteres = 50;
 
-  if ($length >= $limiteCaracteres) {
-    $titulo = substr_replace(substr($titulo, 0, $limiteCaracteres), "_", $length);
+  if ($length >= $limite) {
+    $titulo = substr_replace(substr($titulo, 0, $limite), "_", $length);
   } else {
     $titulo = $titulo;
   }
@@ -110,4 +114,5 @@ function definirTituloPagina() {
 function definirUrlAtual() {
   return "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 }
+
 ?>

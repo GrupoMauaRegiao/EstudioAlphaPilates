@@ -20,7 +20,7 @@
                           <?php echo get_the_date("d/m"); ?>
                         </span>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                          <?php echo formatarTitulo(the_title()); ?>
+                          <?php echo formatarTitulo(the_title(), 70); ?>
                         </a>
                         <span class="hora">
                           [<?php the_time(); ?>]
@@ -50,7 +50,7 @@
                         <?php echo get_the_date("d/m"); ?>
                       </span>
                       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                        <?php echo formatarTitulo(get_the_title()); ?>
+                        <?php echo formatarTitulo(get_the_title(), 70); ?>
                       </a>
                       <span class="hora">
                         [<?php the_time(); ?>]
