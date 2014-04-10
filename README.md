@@ -13,7 +13,7 @@ Para seguir as instruções abaixo você deverá ter o node (npm) instalado.
 
 * Instale os node modules:
 
-`$ sudo npm install`
+`$ npm install`
 
 * Execute a tarefa principal:
 
